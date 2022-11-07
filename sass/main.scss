@@ -1,0 +1,55 @@
+@import 'abstracts/variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  font-size: 1.6rem;
+  background-color: $color-tertiary;
+  color: $color-light;
+  font-family: $font-primary;
+}
+
+.header {
+  height: 10vh;
+  display: block;
+  background-color: $color-primary;
+}
+.main {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.section {
+  height: 100vh;
+  display: block;
+  &--1 {
+    background-color: $color-light;
+  }
+  &--2 {
+    background-color: $color-secondary;
+  }
+  &--3 {
+    background-color: $color-primary;
+  }
+}
+.footer {
+  display: block;
+  height: 60vh;
+  background-color: $color-secondary;
+}
