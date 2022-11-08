@@ -1,0 +1,51 @@
+.coupon {
+  text-align: center;
+  position: relative;
+  background-color: $color-secondary;
+  padding: 1rem 3rem;
+  font-size: 2.8rem;
+  font-weight: $font-weight-bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  @media screen and (min-width: 850px) {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  &__btn-close {
+    position: absolute;
+    right: 1rem;
+    top: 0.7rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    @media screen and (min-width: 850px) {
+        top: 1.2rem;
+      }
+  }
+  &__icon {
+    display: flex;
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+  &__description {
+    line-height: 2rem;
+  }
+  &__btn {
+    background-color: $color-light;
+    color: $color-secondary;
+    border-radius: $radius-big;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    border: none;
+    font-size: 2rem;
+    font-family: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+  }
+  &__counter {
+    line-height: 3rem;
+  }
+}
