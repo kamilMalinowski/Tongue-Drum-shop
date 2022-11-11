@@ -1,5 +1,10 @@
 @import 'abstracts/variables';
+@import 'base/base';
 @import 'components/coupon';
+@import 'components/billboard';
+@import 'components/nav';
+
+@import 'layout/header';
 
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
 
@@ -25,13 +30,9 @@ body {
   background-color: $color-tertiary;
   color: $color-light;
   font-family: $font-primary;
+  position: relative;
 }
 
-.header {
-  height: 10vh;
-  display: block;
-  background-color: $color-primary;
-}
 .main {
   max-width: 1024px;
   margin: 0 auto;

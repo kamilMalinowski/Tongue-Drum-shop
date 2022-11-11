@@ -1,0 +1,74 @@
+.header {
+  padding: 1rem;
+  background-color: $color-light;
+  width: 100%;
+  box-shadow: 0 0.5rem 1rem rgba($color-dark, 0.1);
+  @media screen and (min-width: 608px) {
+    padding: 2rem;
+  }
+  @media screen and (min-width: 850px) {
+    padding: 2rem 0;
+  }
+  &__wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    max-width: 608px;
+    margin: 0 auto;
+    @media screen and (min-width: 850px) {
+      max-width: 120rem;
+      padding: 0 2rem;
+      gap: 4rem;
+    }
+  }
+  &__hamburger-btn {
+    border: none;
+    background-color: transparent;
+    width: 3.8rem;
+    height: 3.8rem;
+    cursor: pointer;
+    @media screen and (min-width: 850px) {
+      display: none;
+    }
+  }
+  &__hamburger-icon {
+    width: 100%;
+    height: auto;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    width: max-content;
+  }
+  &__logo {
+    width: 15rem;
+    height: auto;
+    transform: translateY(3px);
+  }
+  &__nav {
+    display: none;
+    @media screen and (min-width: 850px) {
+      display: block;
+      transform: translateY(4px);
+    }
+  }
+  &__list {
+    display: flex;
+    gap:4rem;
+  }
+  &__list-link {
+    color: $color-dark;
+    font-size: 3.5rem;
+  }
+  &__btn-link {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    margin: 0 0 0 auto;
+  }
+
+  &__link-icon {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -9,25 +9,111 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>
+    <!-- coupon -->
     <div class="coupon">
       <button class="coupon__btn-close">
-        <img src="img/close.svg" alt="Close coupon icon" class="coupon__icon">
+        <img src="img/svg/close.svg" alt="Coupan icon" class="coupon__icon">
       </button>
       <p class="coupon__description">Lorem ipsum dolor sit amet consectetur adipisicing
         <span class="coupon__description coupon__description--amount">40 zł</span>
       </p>
-      <button class="coupon__btn">use HANG-2022</button>
+      <button class="coupon__btn"><span>use HANG-2022</span></button>
       <p class="coupon__counter counter--js">00:00:00:30</p>
     </div>
-    <header class="header"></header>
+    
+    <!-- header -->
+    <header class="header">
+      <div class="header__wrapper">
+        <button class="header__hamburger-btn">
+          <img src="img/svg/hamburger.svg" alt="Hamburger Icon" class="header__hamburger-icon">
+        </button>
+        <a href="#" class="header__link">
+          <img src="img/hangDrum.svg" alt="hangDrum Logo" class="header__logo">
+        </a>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__list-el">
+              <a href="#" class="header__list-link">Home</a>
+            </li>
+            <li class="header__list-el">
+              <a href="#" class="header__list-link">About Us</a>
+            </li>
+            <li class="header__list-el">
+              <a href="#" class="header__list-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#form" class="header__btn-link">
+          <img src="img/svg/shopping-cart.svg" alt="Shopping cart Icon" class="header__link-icon">
+        </a>
+      </div>
+      <nav class="nav active-nav">
+        <button class="nav__btn-close">
+          <img src="img/svg/close.svg" alt="Nav icon" class="nav__btn-close-icon">
+        </button>
+        <img src="img/nav_mobile_large.png" alt="Hang Drum nav image" class="nav__image">
+        <ul class="nav__list">
+          <li class="nav__list-el">
+            <a href="#" class="nav__link">
+              <img src="img/svg/home.svg" alt="Home icon" class="nav__icon">
+              <p class="nav__text">Home</p>
+            </a>
+          </li>
+          <li class="nav__list-el">
+            <a href="#" class="nav__link">
+              <img src="img/svg/info.svg" alt="About us icon" class="nav__icon">
+              <p class="nav__text">About Us</p>
+            </a>
+          </li>
+          <li class="nav__list-el">
+            <a href="#" class="nav__link">
+              <img src="img/svg/contact.svg" alt="Contact icon" class="nav__icon">
+              <p class="nav__text">Contact</p>
+            </a>
+          </li>
+          <li class="nav__list-el">
+            <p class="nav__text nav__text--special">Information</p>
+          </li>
+          <li class="nav__list-el">
+            <a href="#" class="nav__link">
+              <img src="img/svg/terms-and-conditions.svg" alt="Terms and Conditions icon" class="nav__icon">
+              <p class="nav__text">Terms and Conditions</p>
+            </a>
+          </li>
+          <li class="nav__list-el">
+            <a href="#" class="nav__link">
+              <img src="img/svg/privacy-policy.svg" alt="Privacy Policy icon" class="nav__icon">
+              <p class="nav__text">Privacy Policy</p>
+            </a>
+          </li>
+          <li class="nav__list-el">
+            <a href="#" class="nav__link">
+              <img src="img/svg/return.svg" alt="Return and Complaint icon" class="nav__icon">
+              <p class="nav__text">Return and Complaint</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav__backdrop active-nav"></div>
+    </header>
+
+    <!-- billboard -->
+    <a href="about-hang-drum.pdf" class="billboard">
+      <img src="img/billboard_mobile_large.png" alt="About Hang Drum image" class="billboard__image billboard__image--mobile">
+      <img src="img/billboard_desktop_large.png" alt="About Hang Drum image" class="billboard__image billboard__image--desktop">
+    </a>
+
+    <!-- main -->
     <main class="main">
         <section class="section section--1"></section>
         <section class="section section--2"></section>
         <section class="section section--3"></section>
     </main>
-    <button class="btn">button</button>
+
+    <!-- footer -->
     <footer class="footer"></footer>
 
+    <!-- scripts -->
     <script src="app.js"></script>
   </body>
 </html>

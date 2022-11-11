@@ -1,4 +1,7 @@
 {
+  "scripts":{
+    "sass": "sass --watch sass:css"
+  },
   "dependencies": {
     "sass": "^1.56.0"
   }
