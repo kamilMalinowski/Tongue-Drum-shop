@@ -54,11 +54,19 @@
   }
   &__list {
     display: flex;
-    gap:4rem;
+    gap: 4rem;
   }
   &__list-link {
+    font-weight: $font-weight-bold;
+    display: block;
     color: $color-dark;
     font-size: 3.5rem;
+    line-height: 2rem;
+    transition: all 0.4s;
+    &:hover {
+      color: $color-secondary;
+      text-decoration: underline $color-primary 2px;
+    }
   }
   &__btn-link {
     display: flex;
