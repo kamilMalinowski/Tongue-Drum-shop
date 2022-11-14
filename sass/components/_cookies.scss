@@ -1,0 +1,81 @@
+.cookies {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba($color-dark, 0.8);
+  z-index: 9;
+  &__wrapper {
+    text-align: center;
+    padding: 2rem;
+    width: 80%;
+    max-width: 85rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-light;
+    box-shadow: 0 0.5rem 4rem rgba($color-dark, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+    @media screen and (min-width: 850px) {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      padding: 4rem;
+      text-align: left;
+    }
+  }
+  &__icon {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 4px;
+    @media screen and (min-width: 850px) {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+  //   &__section{}
+  &__title {
+    font-size: 2.4rem;
+    font-weight: $fw-extra-bold;
+  }
+  &__description {
+    margin: 2rem 0 3rem;
+  }
+  &__link {
+    color: $color-primary;
+    text-decoration: underline 1px solid;
+  }
+  &__buttons {
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @media screen and (min-width: 608px) {
+      flex-direction: row-reverse;
+    }
+  }
+  &__btn {
+    font-size: 1.8rem;
+    width: 100%;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: $fw-extra-bold;
+    background-color: $color-tertiary;
+    color: rgba($color-dark, 0.5);
+    border-radius: 4px;
+    transition: all 0.4s;
+    &:hover {
+      transform: translateY(-4px);
+    }
+    &--special {
+      background-color: $color-primary;
+      color: $color-light;
+    }
+  }
+}
