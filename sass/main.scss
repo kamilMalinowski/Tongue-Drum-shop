@@ -8,6 +8,7 @@
 @import 'components/detail-box';
 @import 'components/cookies';
 @import 'components/about-us';
+@import 'components/slider';
 
 @import 'layout/header';
 @import 'layout/footer';
@@ -44,8 +45,8 @@ body {
   margin: 0 auto;
 }
 .section {
-  height: 100vh;
   display: block;
+  padding: 2rem;
   &--1 {
     background-color: $color-light;
   }
