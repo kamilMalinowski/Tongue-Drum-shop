@@ -3,6 +3,7 @@
 @import 'components/coupon';
 @import 'components/billboard';
 @import 'components/nav';
+@import 'components/detail-box';
 
 @import 'layout/header';
 
@@ -28,7 +29,7 @@ body {
   height: 100vh;
   font-size: 1.6rem;
   background-color: $color-tertiary;
-  color: $color-light;
+  color: $color-dark;
   font-family: $font-primary;
   position: relative;
 }

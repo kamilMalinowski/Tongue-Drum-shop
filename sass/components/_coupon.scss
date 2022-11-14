@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  color: $color-light;
   @media screen and (min-width: 850px) {
     flex-direction: row;
     gap: 2rem;
