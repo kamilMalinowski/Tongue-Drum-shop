@@ -1,6 +1,9 @@
 .slider {
-  position: relative;
+  overflow: hidden;
+  max-width: 60.8rem;
+  margin: 0 auto;
   &__images {
+    position: relative;
     display: flex;
   }
   &__image {
@@ -8,8 +11,7 @@
     border-radius: 10px;
     height: auto;
   }
-  &__buttons {
-  }
+//   &__buttons {}
   &__btn {
     top: 50%;
     transform: translateY(-50%);

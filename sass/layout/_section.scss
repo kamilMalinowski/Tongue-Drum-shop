@@ -1,0 +1,93 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  position: relative;
+  gap: 2rem;
+  z-index: 9;
+  border-radius: 2px;
+  @media screen and (min-width: 850px) {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  & > * {
+    flex-basis: 100%;
+  }
+  &--1 {
+    background-color: $color-light;
+  }
+  &--2 {
+    padding: 8rem 0;
+  }
+  &__content {
+    max-width: 60.8rem;
+    margin: 0 auto;
+  }
+  &__title-primary {
+    font-weight: $fw-extra-bold;
+    @media screen and (min-width: 608px) {
+      font-size: 3.5rem;
+    }
+  }
+  // &__size{}
+  &__description {
+    margin-top: 1rem;
+    opacity: 0.6;
+  }
+  &__amount {
+    color: $color-primary;
+    font-size: 3.5rem;
+    font-weight: $fw-extra-bold;
+    display: flex;
+    gap: 0.5rem;
+    margin: 2rem 0;
+  }
+  &__currency {
+    transform: translateY(6px);
+    font-size: 1.5rem;
+    justify-self: flex-start;
+  }
+  &__form {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  &__select {
+    height: 4.72rem;
+    border: 2px solid $color-dark;
+    border-radius: 4px;
+    font-size: 2rem;
+    color: $color-primary;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: $fw-extra-bold;
+    border-bottom-width: 4px;
+    width: 30%;
+    @media screen and (min-width: 608px) {
+      width: 100%;
+    }
+  }
+  &__btn {
+    display: block;
+    width: 70%;
+    padding: 1rem;
+    border: none;
+    font-weight: $fw-extra-bold;
+    background-color: $color-dark;
+    color: $color-primary;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: inherit;
+    border-radius: 4px;
+    transition: all 0.2s;
+    cursor: pointer;
+    &:hover {
+      color: $color-light;
+      background-color: $color-primary;
+    }
+    @media screen and (min-width: 608px) {
+      width: 100%;
+    }
+  }
+}

@@ -9,8 +9,10 @@
 @import 'components/cookies';
 @import 'components/about-us';
 @import 'components/slider';
+@import 'components/info';
 
 @import 'layout/header';
+@import 'layout/section';
 @import 'layout/footer';
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&display=swap');
@@ -41,23 +43,9 @@ body {
 }
 
 .main {
-  max-width: 1024px;
+  max-width: 120rem;
   margin: 0 auto;
 }
-.section {
-  display: block;
-  padding: 2rem;
-  &--1 {
-    background-color: $color-light;
-  }
-  &--2 {
-    background-color: $color-secondary;
-  }
-  &--3 {
-    background-color: $color-primary;
-  }
-}
-
 
 // special classes
 .filter {
@@ -69,6 +57,17 @@ body {
 //   box-shadow: 1rem 0 4rem $color-dark;
 //   transform: translateX(0);
 // }
+
+.active-btn{
+  background-color:$color-light;
+}
+
+.active-more{
+  transform: rotate(-180deg);
+}
+.active-section{
+ display: block;
+}
 
 .primary{
   color: $color-primary;
