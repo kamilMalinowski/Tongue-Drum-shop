@@ -1,0 +1,108 @@
+.about-us {
+  background-color: $color-light;
+  box-shadow: 0 0.5rem 2rem rgba($color-dark, 0.2);
+  border-radius: 10px;
+  margin: 0 auto;
+  max-width: 60.8rem;
+  overflow: hidden;
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  &__image {
+    width: 30rem;
+    height: auto;
+    position: absolute;
+    top: -60%;
+    animation: spin 200s infinite linear;
+    filter: drop-shadow(0 0 1rem rgba($color-dark, 0.3));
+    @media screen and (min-width: 608px) {
+      right: -20%;
+      top: -180%;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-top: 20rem;
+    font-weight: $fw-extra-bold;
+    font-size: 3rem;
+    @media screen and (min-width: 608px) {
+      margin-top: 10rem;
+      text-align: left;
+      margin: 4rem auto 0 2rem;
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 1;
+    padding: 1.4rem 2rem 2rem;
+  }
+  &__sub-title {
+    background-color: rgba($color-light, 0.8);
+    border-radius: 4px;
+  }
+  &__description {
+    margin: 1.4rem 0;
+    font-size: 1.4rem;
+  }
+  &__list {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (min-width: 608px) {
+        justify-content: start;
+        gap: 2rem;
+      }
+  }
+  //   &__list-el {}
+  &__link {
+    display: flex;
+  }
+  &__icon {
+    border: 2px solid $color-primary;
+    border-top: 4px solid $color-primary;
+    border-radius: 4px;
+    padding: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+    &:hover {    border-top-width: 2px;
+        border-bottom-width: 4px;
+    }
+    &--facebook {
+      &:hover {
+        background-color: #1877f2;
+      }
+    }
+    &--instagram {
+      &:hover {
+        background: linear-gradient(
+          45deg,
+          #c32aa3,
+          #4c5fd7,
+          #7232bd,
+          #f46f30,
+          #ffdc7d
+        );
+      }
+    }
+    &--youtube {
+      &:hover {
+        background-color: #ff0000;
+      }
+    }
+    &--twitter {
+      &:hover {
+        background-color: #1da1f2;
+      }
+    }
+    &--pinterest {
+      &:hover {
+        background-color: #bd081c;
+      }
+    }
+  }
+}

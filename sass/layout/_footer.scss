@@ -1,0 +1,43 @@
+.footer {
+  background-color: $color-secondary;
+  &__wrapper {
+    max-width: 120rem;
+    padding: 2rem 2rem 8rem;
+    margin: 0 auto;
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 850px) {
+      flex-direction: row-reverse;
+      padding: 4rem 2rem;
+    }
+  }
+  &__list {
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    @media screen and (min-width: 850px) {
+      text-align: left;
+    }
+  }
+  &__list-el {
+    padding-bottom: 3rem;
+    text-transform: uppercase;
+  }
+  &__text {
+    margin: 0 auto;
+    color: $color-dark;
+    font-size: 2rem;
+    font-weight: $fw-extra-bold;
+  }
+  &__link {
+    color: $color-light;
+    display: block;
+    font-weight: $fw-bold;
+    text-decoration: underline;
+    &--special {
+      color: $color-dark;
+      font-weight: $fw-extra-bold;
+    }
+  }
+}
