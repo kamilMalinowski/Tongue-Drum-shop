@@ -52,15 +52,15 @@
     border-bottom: 1px solid $color-tertiary;
     color: inherit;
     background-color: $color-light;
-    line-height: 2rem;
   }
   &__text {
     color: $color-dark;
-    font-size: 3rem;
+    font-weight: $fw-bold;
+    font-size: 2.1rem;
     margin-left: 2rem;
     &--special {
+      padding: 1.2rem 0;
       opacity: 0.5;
-      font-size: 3.2rem;
       text-transform: uppercase;
     }
   }
@@ -84,9 +84,4 @@
       display: none;
     }
   }
-}
-
-.active-nav {
-  box-shadow: 1rem 0 4rem $color-dark;
-  transform: translateX(0);
 }

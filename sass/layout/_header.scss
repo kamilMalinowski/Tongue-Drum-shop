@@ -49,7 +49,6 @@
     display: none;
     @media screen and (min-width: 850px) {
       display: block;
-      transform: translateY(4px);
     }
   }
   &__list {
@@ -57,15 +56,14 @@
     gap: 4rem;
   }
   &__list-link {
-    font-weight: $font-weight-bold;
+    font-weight: $fw-extra-bold;
     display: block;
     color: $color-dark;
-    font-size: 3.5rem;
-    line-height: 2rem;
-    transition: all 0.4s;
+    font-size: 2.1rem;
+    transition: all 0.2s;
     &:hover {
       color: $color-secondary;
-      text-decoration: underline $color-primary 2px;
+      text-decoration: underline $color-primary 3px;
     }
   }
   &__btn-link {

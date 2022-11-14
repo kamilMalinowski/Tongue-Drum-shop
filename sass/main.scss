@@ -6,7 +6,7 @@
 
 @import 'layout/header';
 
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -55,3 +55,14 @@ body {
   height: 60vh;
   background-color: $color-secondary;
 }
+
+// special classes
+.filter {
+  filter: blur(10px);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+// .active-nav {
+//   box-shadow: 1rem 0 4rem $color-dark;
+//   transform: translateX(0);
+// }
