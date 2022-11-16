@@ -60,6 +60,10 @@ body {
 
 .active-btn{
   background-color:$color-light;
+  box-shadow: 0 0 2rem rgba($color-light, 0.7);
+  &:hover{
+    box-shadow: 0 0 2rem $color-light;
+  }
 }
 
 .active-more{

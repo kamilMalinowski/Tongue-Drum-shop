@@ -4,7 +4,6 @@
   padding: 2rem;
   position: relative;
   gap: 2rem;
-  z-index: 9;
   border-radius: 2px;
   @media screen and (min-width: 850px) {
     flex-direction: row;
@@ -14,10 +13,15 @@
     flex-basis: 100%;
   }
   &--1 {
+    z-index: 99;
     background-color: $color-light;
   }
   &--2 {
-    padding: 8rem 0;
+    background-color: rgba($color-primary,0.2);
+    padding: 2rem 0;
+    @media screen and (min-width: 608px) {
+      padding: 4rem 0;
+    }
   }
   &__content {
     max-width: 60.8rem;

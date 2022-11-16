@@ -6,7 +6,7 @@
   align-items: stretch;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 99999;
   background-color: $color-light;
   height: 100%;
   box-shadow: none;
@@ -78,7 +78,7 @@
     background-color: $color-dark;
     height: 100%;
     opacity: 0.8;
-    z-index: 2;
+    z-index: 99;
     transform: translateX(-100%);
     @media screen and (min-width: 850px) {
       display: none;
