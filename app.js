@@ -10,6 +10,8 @@ const nav = document.querySelector('.nav')
 const navBtnClose = document.querySelector('.nav__btn-close')
 const navBackdrop = document.querySelector('.nav__backdrop')
 const hamburgerBtn = document.querySelector('.header__hamburger-btn')
+const header = document.querySelector('.header')
+const billboard = document.querySelector('.billboard')
 
 let countdown
 
@@ -57,3 +59,18 @@ hamburgerBtn.addEventListener('click', function () {
 navBtnClose.addEventListener('click', hideNavigation)
 navBackdrop.addEventListener('click', hideNavigation)
 
+const observerOptions = {
+  root: null,
+  threshold: 1,
+}
+const observerCallback = function (entries) {
+  const [entry] = entries
+  console.log(entry)
+  !entry.isIntersecting
+    ? header.classList.add('fixed-header')
+    : header.classList.remove('fixed-header')
+}
+
+const observer = new IntersectionObserver(observerCallback, observerOptions)
+
+observer.observe(billboard)

@@ -59,37 +59,46 @@ body {
   transform: translateX(0);
 }
 
-.active-btn{
-  background-color:$color-light;
+.active-btn {
+  background-color: $color-light;
   box-shadow: 0 0 2rem rgba($color-light, 0.7);
-  &:hover{
+  &:hover {
     box-shadow: 0 0 2rem $color-light;
   }
 }
 
-.active-more{
+.active-more {
   transform: rotate(-180deg);
 }
 
-.active-section{
- display: block;
+.active-section {
+  display: block;
 }
 
-.active-step{
-font-weight: $fw-extra-bold;
-span{
-  color: $color-light;
-  background-color: $color-secondary;
-  border-color: $color-secondary;
-}
-p{
-  color: $color-secondary;
-}
+.active-step {
+  font-weight: $fw-extra-bold;
+  span {
+    color: $color-light;
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+  }
+  p {
+    color: $color-secondary;
+  }
 }
 
-.primary{
+.primary {
   color: $color-primary;
 }
-.secondary{
+.secondary {
   color: $color-secondary;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  background-color: rgba($color-light, 0.95);
+  z-index: 99;
+  animation: show 1s ease-in-out;
+  box-shadow: 0 0.5rem 1rem rgba($color-dark, 0.1);
 }
