@@ -12,6 +12,7 @@ const navBackdrop = document.querySelector('.nav__backdrop')
 const hamburgerBtn = document.querySelector('.header__hamburger-btn')
 const header = document.querySelector('.header')
 const billboard = document.querySelector('.billboard')
+const body = document.querySelector('.body')
 
 let countdown
 
@@ -50,10 +51,12 @@ const startCountdown = function () {
 const hideNavigation = function () {
   nav.classList.remove('active-nav')
   navBackdrop.classList.remove('active-nav')
+  body.classList.remove('stop-body')
 }
 hamburgerBtn.addEventListener('click', function () {
   nav.classList.add('active-nav')
   navBackdrop.classList.add('active-nav')
+  body.classList.add('stop-body')
 })
 
 navBtnClose.addEventListener('click', hideNavigation)
@@ -61,11 +64,11 @@ navBackdrop.addEventListener('click', hideNavigation)
 
 const observerOptions = {
   root: null,
+  rootMargin: '0px',
   threshold: 1,
 }
 const observerCallback = function (entries) {
   const [entry] = entries
-  console.log(entry)
   !entry.isIntersecting
     ? header.classList.add('fixed-header')
     : header.classList.remove('fixed-header')
@@ -74,3 +77,37 @@ const observerCallback = function (entries) {
 const observer = new IntersectionObserver(observerCallback, observerOptions)
 
 observer.observe(billboard)
+
+//lazy loading images
+const imageTargets = document.querySelectorAll('img[data-src]')
+
+imageTargets.forEach((entry) =>  {
+  console.log(entry)
+  entry.src = entry.dataset.src
+
+  entry.addEventListener('load', () =>
+    entry.classList.remove('filter'),
+  )
+})
+const lazyImgOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 1,
+}
+const lazyImgCallback = function (entries) {
+  const [entry] = entries
+  if (!entry.isIntersecting) return
+  console.table('lazy: ' + entry)
+  entry.target.src = entry.target.dataset.src
+
+  entry.target.addEventListener('load', () =>
+    entry.target.classList.remove('filter'),
+  )
+}
+
+const lazyImgObserver = new IntersectionObserver(
+  lazyImgCallback,
+  lazyImgOptions,
+)
+
+imageTargets.forEach((img) => lazyImgObserver.observe(img))

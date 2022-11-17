@@ -10,7 +10,7 @@
     <!-- scripts -->
     <script defer src="app.js"></script>
   </head>
-  <body>
+  <body class="body">
     <!-- coupon -->
     <div class="coupon">
       <button class="coupon__btn-close">
@@ -53,7 +53,12 @@
         <button class="nav__btn-close">
           <img src="img/svg/close.svg" alt="Cancel icon" class="nav__btn-close-icon">
         </button>
-        <img src="img/nav_mobile_small.png" alt="Hang Drum nav image" class="nav__image filter">
+        <img 
+          src="img/nav_mobile_small.png" 
+          data-src="img/nav_mobile_large.png" 
+          alt="Hang Drum nav image" 
+          class="nav__image filter"
+        >
         <ul class="nav__list">
           <li class="nav__list-el">
             <a href="#" class="nav__link">
@@ -101,8 +106,16 @@
 
     <!-- billboard -->
     <a href="about-hang-drum.pdf" class="billboard">
-      <img src="img/billboard_mobile_small.png" alt="About Hang Drum image" class="billboard__image billboard__image--mobile filter">
-      <img src="img/billboard_desktop_small.png" alt="About Hang Drum image" class="billboard__image billboard__image--desktop filter">
+      <img 
+        src="img/billboard_mobile_large.png"
+        alt="About Hang Drum image" 
+        class="billboard__image billboard__image--mobile"
+      >
+      <img
+        src="img/billboard_desktop_large.png"
+        alt="About Hang Drum image" 
+        class="billboard__image billboard__image--desktop"
+      >
     </a>
 
     <!-- main -->
@@ -256,7 +269,12 @@
           <h3 class="form__title">Shopping Cart</h3>
 
           <div class="card">
-            <img src="img/detail-box_mobile_large.png" alt="Product image" class="card__image">
+            <img 
+              src="img/detail-box_mobile_small.png"
+              data-src="img/detail-box_mobile_large.png"
+              alt="Product image"
+              class="card__image filter filter--circle"
+            >
             <section class="card__section">
               <h4 class="card__title">HangDRUM Hang drum 6" gold</h4>
             </section>
@@ -320,7 +338,12 @@
 
         <div class="about-us">
           <section class="about-us__heading">
-            <img src="img/about-us_large.png" alt="Product image" class="about-us__image">
+            <img
+              src="img/about-us_small.png"
+              data-src="img/about-us_large.png"
+              alt="Product image"
+              class="about-us__image filter filter--circle"
+            >
             <h3 class="about-us__title">
               Hi! We are <span class="primary">Hang</span><span class="secondary">DRUM</span>
             </h3>

@@ -20,6 +20,7 @@
   }
   @media screen and (max-height: 520px) {
     overflow-y: scroll;
+    overflow-x: hidden;
   }
   &__btn-close {
     position: absolute;
