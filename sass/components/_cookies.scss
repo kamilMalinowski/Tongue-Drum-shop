@@ -1,12 +1,11 @@
 .cookies {
-  display: none; //wait for js
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   background-color: rgba($color-dark, 0.8);
-  z-index: 9;
+  z-index: 999;
   &__wrapper {
     text-align: center;
     padding: 2rem;
@@ -20,6 +19,7 @@
     box-shadow: 0 0.5rem 4rem rgba($color-dark, 0.6);
     border-radius: 10px;
     overflow: hidden;
+    animation: zoom 1s ease-in-out;
     @media screen and (min-width: 850px) {
       display: flex;
       gap: 3rem;
@@ -48,6 +48,9 @@
   &__link {
     color: $color-primary;
     text-decoration: underline 1px solid;
+    &:hover {
+      color: $color-secondary;
+    }
   }
   &__buttons {
     gap: 1rem;
@@ -72,11 +75,14 @@
     border-radius: 4px;
     transition: all 0.4s;
     &:hover {
-      transform: translateY(-4px);
+      background-color: transparent;
     }
     &--special {
       background-color: $color-primary;
       color: $color-light;
+      &:hover {
+        background-color: $color-secondary;
+      }
     }
   }
 }

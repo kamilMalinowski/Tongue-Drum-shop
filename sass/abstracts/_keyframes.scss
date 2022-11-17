@@ -1,3 +1,4 @@
+// footer
 @keyframes spin {
   0% {
     transform: rotate(0);
@@ -7,12 +8,25 @@
   }
 }
 
+// empty shopping cart
 @keyframes jump {
   0% {
     transform: translateY(4px);
   }
   100% {
     transform:  translateY(-4px);
+  }
+}
+
+// cookies
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%)  scale(1);
   }
 }
 

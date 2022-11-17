@@ -7,6 +7,8 @@
     <title>Hang drum | Shop</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- scripts -->
+    <script defer src="app.js"></script>
   </head>
   <body>
     <!-- coupon -->
@@ -18,7 +20,7 @@
         <span class="coupon__description coupon__description--amount">40 zł</span>
       </p>
       <button class="coupon__btn"><span>use HANG-2022</span></button>
-      <p class="coupon__counter counter--js">00:00:00:30</p>
+      <p class="coupon__countdown">30:00</p>
     </div>
     
     <!-- header -->
@@ -396,8 +398,12 @@
             <a href="#" class="cookies__link">Find out how we use cookies.</a>
           </p>
           <div class="cookies__buttons">
-            <button class="cookies__btn cookies__btn--special">accept all</button>
-            <button class="cookies__btn">decline</button>
+            <button data-atribute="accepted" class="cookies__btn cookies__btn--special">
+              accept all
+            </button>
+            <button data-atribute="declined" class="cookies__btn">
+              decline
+            </button>
           </div>
         </section>
       </div>
@@ -412,7 +418,5 @@
       </a>
     </section>
 
-    <!-- scripts -->
-    <script src="app.js"></script>
   </body>
 </html>
