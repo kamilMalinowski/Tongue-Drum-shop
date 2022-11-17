@@ -1,9 +1,19 @@
 'use strict'
-// cookies
+// elements
 const cookies = document.querySelector('.cookies')
 const cookiesButtonsContainer = document.querySelector('.cookies__buttons')
 const cookiesButtons = document.querySelectorAll('.cookies__btn')
+const coupon = document.querySelector('.coupon')
+const couponBtnClose = document.querySelector('.coupon__btn-close')
+const couponCountdown = document.querySelector('.coupon__countdown')
+const nav = document.querySelector('.nav')
+const navBtnClose = document.querySelector('.nav__btn-close')
+const navBackdrop = document.querySelector('.nav__backdrop')
+const hamburgerBtn = document.querySelector('.header__hamburger-btn')
 
+let countdown
+
+// cookies
 cookiesButtonsContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.cookies__btn')
   if (!clicked) return //guard clause
@@ -13,23 +23,18 @@ cookiesButtonsContainer.addEventListener('click', function (e) {
 })
 
 // coupon
-const coupon = document.querySelector('.coupon')
-const couponBtnClose = document.querySelector('.coupon__btn-close')
-const couponCountdown = document.querySelector('.coupon__countdown')
-let countdown
-
 const deleteCoupon = function () {
   coupon.style.display = 'none'
   clearInterval(countdown)
 }
 couponBtnClose.addEventListener('click', deleteCoupon)
+
 const startCountdown = function () {
   const tick = function () {
     const min = String(Math.trunc(time / 60)).padStart(2, 0)
     const sec = String(time % 60).padStart(2, 0)
     couponCountdown.textContent = `${min}:${sec}`
     time--
-    console.log(time)
     if (time === 0) {
       deleteCoupon()
     }
@@ -38,3 +43,17 @@ const startCountdown = function () {
   tick()
   countdown = setInterval(tick, 1000)
 }
+
+// navigation
+const hideNavigation = function () {
+  nav.classList.remove('active-nav')
+  navBackdrop.classList.remove('active-nav')
+}
+hamburgerBtn.addEventListener('click', function () {
+  nav.classList.add('active-nav')
+  navBackdrop.classList.add('active-nav')
+})
+
+navBtnClose.addEventListener('click', hideNavigation)
+navBackdrop.addEventListener('click', hideNavigation)
+

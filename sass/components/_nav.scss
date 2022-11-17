@@ -78,7 +78,7 @@
     background-color: $color-dark;
     height: 100%;
     opacity: 0.8;
-    z-index: 99;
+    z-index: 999;
     transform: translateX(-100%);
     @media screen and (min-width: 850px) {
       display: none;

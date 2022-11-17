@@ -197,7 +197,7 @@
   background-color: #353535;
   height: 100%;
   opacity: 0.8;
-  z-index: 99;
+  z-index: 999;
   transform: translateX(-100%);
 }
 @media screen and (min-width: 850px) {
@@ -1072,6 +1072,11 @@ body {
 .filter {
   filter: blur(10px);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.active-nav {
+  box-shadow: 1rem 0 4rem #353535;
+  transform: translateX(0);
 }
 
 .active-btn {
