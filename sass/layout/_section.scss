@@ -17,6 +17,7 @@
     background-color: $color-light;
   }
   &--2 {
+    overflow: hidden;
     background-color: rgba($color-primary,0.2);
     padding: 2rem 0;
     @media screen and (min-width: 608px) {

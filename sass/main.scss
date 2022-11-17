@@ -10,6 +10,7 @@
 @import 'components/about-us';
 @import 'components/slider';
 @import 'components/info';
+@import 'components/form';
 
 @import 'layout/header';
 @import 'layout/section';
@@ -69,8 +70,21 @@ body {
 .active-more{
   transform: rotate(-180deg);
 }
+
 .active-section{
  display: block;
+}
+
+.active-step{
+font-weight: $fw-extra-bold;
+span{
+  color: $color-light;
+  background-color: $color-secondary;
+  border-color: $color-secondary;
+}
+p{
+  color: $color-secondary;
+}
 }
 
 .primary{
