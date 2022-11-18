@@ -272,7 +272,7 @@
         <section class="steps">
           <h3 class="steps__title">Your cart is empty 😩</h3>
           <!-- step 0 -->
-          <div class="step step--0">
+          <div class="step step--0 active-step">
             <img src="img/cart_large.png" alt="Empty cart image" class="step__image">
           </div>
 
@@ -310,11 +310,47 @@
             </div>
           </div>
           <!-- step 2 -->
-          <div class="step step--2">
-            <!-- delivery and payment methods -->
+          <div class="step step--2 active-step">
+            <!-- delivery -->
+            <div class="radio-box">
+              <input class="radio-box__input" type="radio" id="courier" name="delivery" checked>
+              <label class="radio-box__label" for="courier">
+                  <span class="radio-box__title">Courier</span>
+                  <span class="radio-box__description">
+                    Delivery within 1 - 2 business days from when the order was handed over to the carrier. We deliver the goods via InPost courier company.
+                  </span>
+                  <span class="radio-box__amount">10000zł</span>
+                  <img src="img/svg/delivery.svg" alt="Delivery icon" class="radio-box__icon">
+              </label>
+            </div>
+            <h4 class="card__title">Payment:</h4>
+            <br> <!-- temporary solution -->
+            <!-- payment -->
+            <div class="radio-box">
+              <input class="radio-box__input" type="radio" id="bank" name="payment" checked>
+              <label class="radio-box__label" for="bank">
+                  <span class="radio-box__title">bank</span>
+                  <span class="radio-box__description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, aperiam nemo sequi ex similique voluptas facere saepe ab assumenda velit ducimus.
+                  </span>
+                  <span class="radio-box__amount">10000zł</span>
+                  <img src="img/svg/bank.svg" alt="Bank icon" class="radio-box__icon">
+              </label>
+            </div>
+            <div class="radio-box">
+              <input class="radio-box__input" type="radio" id="cod" name="payment">
+              <label class="radio-box__label" for="cod">
+                  <span class="radio-box__title">cod</span>
+                  <span class="radio-box__description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, aperiam nemo sequi ex similique voluptas facere saepe ab assumenda velit ducimus.
+                  </span>
+                  <span class="radio-box__amount">10000zł</span>
+                  <img src="img/svg/cod.svg" alt="Payment icon" class="radio-box__icon">
+              </label>
+            </div>
           </div>
           <!-- step 3 -->
-          <div class="step step--3">
+          <div class="step step--3 active-step">
             <div class="adress">
               <div class="address__row">
                 <div class="address__col">
