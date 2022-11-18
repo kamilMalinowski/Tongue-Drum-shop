@@ -19,8 +19,11 @@ const infoButtons = document.querySelectorAll('.info__btn')
 const infoSections = document.querySelectorAll('.info__section')
 const slider = document.querySelector('.slider')
 const slides = document.querySelectorAll('.slider__el')
+const sliderBtnNext = document.querySelector('.slider__btn--next')
+const sliderBtnPrev = document.querySelector('.slider__btn--prev')
 
 let countdown
+let currentSlide = 0
 
 // cookies
 cookiesButtonsContainer.addEventListener('click', function (e) {
@@ -121,3 +124,34 @@ infoButtonsContainer.addEventListener('click', function (e) {
   section.classList.add('active-section')
 })
 
+// slider
+slides.forEach((slide, index) => {
+  slide.style.transform = `translateX(${100 * index}%)`
+})
+
+const moveToSlide = function (cur) {
+  slides.forEach((slide, index) => {
+    slide.style.transform = `translateX(${100 * (index - cur)}%)`
+  })
+}
+
+const nextSlide = function () {
+  if (currentSlide == slides.length - 1) {
+    currentSlide = 0
+  } else {
+    currentSlide++
+  }
+  moveToSlide(currentSlide)
+}
+
+const prevSlide = function () {
+  if ((currentSlide == 0)) {
+    currentSlide = slides.length - 1
+  } else {
+    currentSlide--
+  }
+  moveToSlide(currentSlide)
+}
+
+sliderBtnNext.addEventListener('click', nextSlide)
+sliderBtnPrev.addEventListener('click', prevSlide)
