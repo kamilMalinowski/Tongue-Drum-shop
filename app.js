@@ -155,3 +155,5 @@ const prevSlide = function () {
 
 sliderBtnNext.addEventListener('click', nextSlide)
 sliderBtnPrev.addEventListener('click', prevSlide)
+
+// form

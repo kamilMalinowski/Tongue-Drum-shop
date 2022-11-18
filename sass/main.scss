@@ -88,16 +88,20 @@ img[data-src]{
   box-shadow: 0 0 2rem rgba($color-light, 0.7);
 }
 
-.active-step {
+.active-step-btn {
   font-weight: $fw-extra-bold;
-  span {
+  span:first-child {
     color: $color-light;
     background-color: $color-secondary;
     border-color: $color-secondary;
   }
-  p {
+  span:last-child{
     color: $color-secondary;
   }
+}
+
+.active-step{
+  display: grid;
 }
 
 .primary {
