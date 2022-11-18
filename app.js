@@ -13,6 +13,12 @@ const hamburgerBtn = document.querySelector('.header__hamburger-btn')
 const header = document.querySelector('.header')
 const billboard = document.querySelector('.billboard')
 const body = document.querySelector('.body')
+const imageTargets = document.querySelectorAll('img[data-src]')
+const infoButtonsContainer = document.querySelector('.info__buttons')
+const infoButtons = document.querySelectorAll('.info__btn')
+const infoSections = document.querySelectorAll('.info__section')
+const slider = document.querySelector('.slider')
+const slides = document.querySelectorAll('.slider__el')
 
 let countdown
 
@@ -75,31 +81,19 @@ const observerCallback = function (entries) {
 }
 
 const observer = new IntersectionObserver(observerCallback, observerOptions)
-
 observer.observe(billboard)
 
 //lazy loading images
-const imageTargets = document.querySelectorAll('img[data-src]')
-
-imageTargets.forEach((entry) =>  {
-  console.log(entry)
-  entry.src = entry.dataset.src
-
-  entry.addEventListener('load', () =>
-    entry.classList.remove('filter'),
-  )
-})
 const lazyImgOptions = {
   root: null,
   rootMargin: '0px',
-  threshold: 1,
+  threshold: 0.2,
 }
+
 const lazyImgCallback = function (entries) {
   const [entry] = entries
   if (!entry.isIntersecting) return
-  console.table('lazy: ' + entry)
   entry.target.src = entry.target.dataset.src
-
   entry.target.addEventListener('load', () =>
     entry.target.classList.remove('filter'),
   )
@@ -111,3 +105,19 @@ const lazyImgObserver = new IntersectionObserver(
 )
 
 imageTargets.forEach((img) => lazyImgObserver.observe(img))
+
+//info
+infoButtonsContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.info__btn')
+  const section = document.querySelector(
+    `.info__section--${clicked.dataset.tab}`,
+  )
+  if (!clicked) return
+
+  infoButtons.forEach((iBtn) => iBtn.classList.remove('active-btn'))
+  infoSections.forEach((section) => section.classList.remove('active-section'))
+
+  clicked.classList.add('active-btn')
+  section.classList.add('active-section')
+})
+

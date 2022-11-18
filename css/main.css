@@ -538,6 +538,7 @@
   }
 }
 .info__btn-icon {
+  transform: rotate(0);
   width: 2.8rem;
   height: 2.8rem;
 }
@@ -566,8 +567,9 @@
   gap: 2rem;
 }
 .info__section {
-  background-color: #fff;
   display: none;
+  opacity: 0;
+  background-color: #fff;
   transition: all 0.2s;
   width: 100%;
   flex-basis: 100%;
@@ -1103,12 +1105,14 @@ img[data-src] {
   box-shadow: 0 0 2rem #fff;
 }
 
-.active-more {
+.active-btn > .active-btn--more {
   transform: rotate(-180deg);
 }
 
 .active-section {
   display: block;
+  opacity: 1;
+  box-shadow: 0 0 2rem rgba(255, 255, 255, 0.7);
 }
 
 .active-step {

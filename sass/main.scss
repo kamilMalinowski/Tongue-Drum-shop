@@ -76,12 +76,16 @@ img[data-src]{
   }
 }
 
-.active-more {
+.active-btn > .active-btn--more {
   transform: rotate(-180deg);
 }
 
+
+
 .active-section {
   display: block;
+  opacity: 1;
+  box-shadow: 0 0 2rem rgba($color-light, 0.7);
 }
 
 .active-step {

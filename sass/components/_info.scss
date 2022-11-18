@@ -34,6 +34,7 @@
     }
   }
   &__btn-icon {
+    transform: rotate(0);
     width: 2.8rem;
     height: 2.8rem;
   }
@@ -59,8 +60,9 @@
   }
 
   &__section {
-    background-color: $color-light;
     display: none;
+    opacity: 0;
+    background-color: $color-light;
     transition: all 0.2s;
     width: 100%;
     flex-basis: 100%;

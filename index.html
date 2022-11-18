@@ -122,13 +122,21 @@
     <main class="main">
       <div class="section section--1">
         <div class="slider">
-          <div class="slider__images">
-            <img src="img/slider0_large.png" alt="Slider image" class="slider__image">
-            <img src="img/slider1_large.png" alt="Slider image" class="slider__image">
-            <img src="img/slider2_large.png" alt="Slider image" class="slider__image">
-            <img src="img/slider3_large.png" alt="Slider image" class="slider__image">
-            <img src="img/slider4_large.png" alt="Slider image" class="slider__image">
-            <img src="img/slider5_large.png" alt="Slider image" class="slider__image">
+            <div class="slider__el slider__el--1">
+              <img src="img/slider1_large.png" alt="Slider image" class="slider__image">
+            </div>
+            <div class="slider__el slider__el--2">
+              <img src="img/slider2_large.png" alt="Slider image" class="slider__image">
+            </div>
+            <div class="slider__el slider__el--3">
+              <img src="img/slider3_large.png" alt="Slider image" class="slider__image">
+            </div>
+            <div class="slider__el slider__el--4">
+              <img src="img/slider5_large.png" alt="Slider image" class="slider__image">
+            </div>
+            <div class="slider__el slider__el--5">
+              <img src="img/slider4_large.png" alt="Slider image" class="slider__image">
+            </div>
             <div class="slider__buttons">
               <button class="slider__btn slider__btn--next">
                 <img src="img/svg/arrow-next.svg" alt="Arrow next icon" class="slider__btn-icon">
@@ -137,7 +145,6 @@
                 <img src="img/svg/arrow-prev.svg" alt="Arrow prev icon" class="slider__btn-icon">
               </button>
             </div>
-          </div>
         </div>
 
         <section class="section__content">
@@ -165,26 +172,26 @@
 
         <div class="info">
           <div class="info__buttons">
-            <button class="info__btn active-btn">
+            <button data-tab="1" class="info__btn active-btn">
               <img src="img/svg/info.svg" alt="Info icon" class="info__btn-icon">
               <p class="info__btn-text">description</p>
-              <img src="img/svg/more-btn.svg" alt="More icon" class="info__btn-icon active-more">
+              <img src="img/svg/more-btn.svg" alt="More icon" class="info__btn-icon active-btn--more">
             </button>
-            <button class="info__btn">
+            <button data-tab="2" class="info__btn">
               <img src="img/svg/specification.svg" alt="Specification icon" class="info__btn-icon">
               <p class="info__btn-text">dimensions</p>
-              <img src="img/svg/more-btn.svg" alt="More icon" class="info__btn-icon">
+              <img src="img/svg/more-btn.svg" alt="More icon" class="info__btn-icon active-btn--more">
             </button>
-            <button class="info__btn">
+            <button data-tab="3" class="info__btn">
               <img src="img/svg/sound.svg" alt="Sound sample icon" class="info__btn-icon">
               <p class="info__btn-text">mp3 samples</p>
-              <img src="img/svg/more-btn.svg" alt="More icon" class="info__btn-icon">
+              <img src="img/svg/more-btn.svg" alt="More icon" class="info__btn-icon active-btn--more">
             </button>
           </div>
 
           <div class="info__content">
             <!-- info section 1 -->
-            <section class="info__section active-section">
+            <section class="info__section info__section--1 active-section">
               <h3 class="info__title">Product code: HANG DRUM</h3>
               <ul class="info__list">
                 <li class="info__list-el">Lorem ipsum dolor sit</li>
@@ -199,7 +206,7 @@
             </section>
   
             <!-- info section 2 -->
-            <section class="info__section">
+            <section class="info__section info__section--2">
               <h3 class="info__title">Product code: HANG DRUM</h3>
               <ul class="info__list">
                 <li class="info__list-el">Lorem ipsum dolor sit</li>
@@ -213,7 +220,7 @@
             </section>
 
             <!-- info section 3 -->
-            <section class="info__section">
+            <section class="info__section info__section--3">
               <h3 class="info__title">Product code: HANG DRUM</h3>
               <ul class="info__list">
                 <li class="info__list-el">Sound sample 1:
