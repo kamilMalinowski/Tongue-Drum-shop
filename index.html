@@ -269,24 +269,44 @@
         </div>
 
         <!-- steps -->
-        <section class="steps active-step">
+        <section class="steps">
           <h3 class="steps__title">Your cart is empty 😩</h3>
           <!-- step 0 -->
-          <div class="step step--0 active-step">
+          <div class="step step--0">
             <img src="img/cart_large.png" alt="Empty cart image" class="step__image">
           </div>
+          
           <!-- step 1 -->
-          <div class="step step--1">
+          <div class="step step--1 active-step">
             <div class="card">
-              <img 
-                src="img/detail-box_mobile_small.png"
-                data-src="img/detail-box_mobile_large.png"
-                alt="Product image"
-                class="card__image filter filter--circle"
-              >
+              <div class="card__image-wrapper">
+                <img 
+                  src="img/about-us_small.png"
+                  data-src="img/about-us_large.png"
+                  alt="Product image"
+                  class="card__image filter filter--circle"
+                >
+              </div>
               <section class="card__section">
                 <h4 class="card__title">HangDRUM Hang drum 6" gold</h4>
+                <div class="card__box">
+                  <p class="card__amount">49.99zł</p>
+                  <div class="card__pieces">
+                    <button class="card__btn card__btn--min">
+                      <img src="img/svg/min.svg" alt="Min icon" class="card__btn-icon">
+                    </button>
+                    <p class="card__quantity">1</p>
+                    <button class="card__btn card__btn--max">
+                      <img src="img/svg/max.svg" alt="Max icon" class="card__btn-icon">
+                    </button>
+                  </div>
+                </div>
               </section>
+            </div>
+
+            <div class="card__total">
+              <h4 class="card__title">Total:</h4>
+              <p class="card__amount">49.99zł</p>
             </div>
           </div>
           <!-- step 2 -->
