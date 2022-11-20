@@ -114,8 +114,8 @@ img[data-src]{
 .fixed-header {
   position: sticky;
   top: 0;
-  background-color: rgba($color-light, 0.95);
   z-index: 99;
+  border-radius: 0 0 24px 24px;
   animation: show 1s ease-in-out;
-  box-shadow: 0 0.5rem 1rem rgba($color-dark, 0.1);
+  box-shadow: 0 0.5rem 4rem rgba($color-dark, 0.2);
 }

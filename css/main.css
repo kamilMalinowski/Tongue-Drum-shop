@@ -1005,6 +1005,11 @@
     gap: 4rem;
   }
 }
+@media screen and (min-width: 1224px) {
+  .header__wrapper {
+    padding: 0;
+  }
+}
 .header__hamburger-btn {
   border: none;
   background-color: transparent;
@@ -1029,7 +1034,7 @@
 .header__logo {
   width: 15rem;
   height: auto;
-  transform: translateY(3px);
+  transform: translateY(1px);
 }
 .header__nav {
   display: none;
@@ -1058,7 +1063,7 @@
   display: flex;
   width: 3rem;
   height: 3rem;
-  margin: 0 0 0 auto;
+  margin: 0 2rem 0 auto;
 }
 .header__link-icon {
   width: 100%;
@@ -1315,10 +1320,10 @@ img[data-src] {
 .fixed-header {
   position: sticky;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.95);
   z-index: 99;
+  border-radius: 0 0 24px 24px;
   animation: show 1s ease-in-out;
-  box-shadow: 0 0.5rem 1rem rgba(53, 53, 53, 0.1);
+  box-shadow: 0 0.5rem 4rem rgba(53, 53, 53, 0.2);
 }
 
 /*# sourceMappingURL=main.css.map */

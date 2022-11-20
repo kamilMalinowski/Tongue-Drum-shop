@@ -21,6 +21,9 @@
       padding: 0 2rem;
       gap: 4rem;
     }
+    @media screen and (min-width: 1224px) {
+      padding: 0;
+    }
   }
   &__hamburger-btn {
     border: none;
@@ -44,7 +47,7 @@
   &__logo {
     width: 15rem;
     height: auto;
-    transform: translateY(3px);
+    transform: translateY(1px);
   }
   &__nav {
     display: none;
@@ -71,7 +74,7 @@
     display: flex;
     width: 3rem;
     height: 3rem;
-    margin: 0 0 0 auto;
+    margin: 0 2rem 0 auto;
   }
 
   &__link-icon {
