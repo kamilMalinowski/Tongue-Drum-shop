@@ -225,6 +225,7 @@
   z-index: 9;
   border-radius: 24px 24px 0 0;
   box-shadow: 0 -0.5rem 4rem rgba(53, 53, 53, 0.2);
+  transition: all 1s ease-in-out;
 }
 @media screen and (min-width: 850px) {
   .detail-box {
@@ -259,6 +260,10 @@
   align-items: center;
   border-radius: 30px;
   box-shadow: 0 0.1rem 0.5rem rgba(53, 53, 53, 0.2);
+  transition: all 0.2s;
+}
+.detail-box__btn-link:hover {
+  background-color: #87aa8c;
 }
 .detail-box__icon {
   width: 3rem;
@@ -982,7 +987,7 @@
 }
 @media screen and (min-width: 608px) {
   .header {
-    padding: 2rem;
+    padding: 1rem 2rem;
   }
 }
 @media screen and (min-width: 850px) {
@@ -1059,10 +1064,28 @@
   text-decoration: underline #d7ae75 3px;
 }
 .header__btn-link {
+  position: relative;
   display: flex;
   width: 3rem;
   height: 3rem;
   margin: 0 2rem 0 auto;
+  z-index: 1;
+}
+.header__btn-number {
+  position: absolute;
+  top: -0.4rem;
+  right: -1rem;
+  background-color: #d7ae75;
+  color: #fff;
+  font-weight: 700;
+  display: grid;
+  place-content: center;
+  width: 1.8rem;
+  border-radius: 100px;
+  font-size: 1rem;
+  height: 1.8rem;
+  z-index: -1;
+  transition: all 0.2s;
 }
 .header__link-icon {
   width: 100%;
@@ -1159,6 +1182,7 @@
   font-weight: 800;
   background-color: #353535;
   color: #d7ae75;
+  text-align: center;
   text-transform: uppercase;
   font-size: 2rem;
   font-family: inherit;
@@ -1323,6 +1347,18 @@ img[data-src] {
   border-radius: 0 0 24px 24px;
   animation: show 1s ease-in-out;
   box-shadow: 0 0.5rem 4rem rgba(53, 53, 53, 0.2);
+}
+
+.hide-detail-box {
+  transform: translateY(100%);
+}
+
+.hide-section-form {
+  display: none;
+}
+
+.added {
+  background-color: #87aa8c;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -21,9 +21,20 @@ const slider = document.querySelector('.slider')
 const slides = document.querySelectorAll('.slider__el')
 const sliderBtnNext = document.querySelector('.slider__btn--next')
 const sliderBtnPrev = document.querySelector('.slider__btn--prev')
+const detailBox = document.querySelector('.detail-box')
+const detailBtn = document.querySelector('.detail-box__btn-link')
+const cartBtnNumber = document.querySelector('.header__btn-number')
+const primaryBtn = document.querySelectorAll('[data-btn]')
+const sectionForm = document.querySelector('.section__form')
+const formStepZero = document.querySelector('.step--0')
+const formSteps = document.querySelectorAll('.step')
+const stepsBtn = document.querySelector('.steps__btn')
+const summary = document.querySelector('.summary')
 
 let countdown
 let currentSlide = 0
+let numberOfProducts = 0
+let step = 0
 
 // cookies
 cookiesButtonsContainer.addEventListener('click', function (e) {
@@ -130,10 +141,6 @@ infoButtonsContainer.addEventListener('click', function (e) {
 })
 
 // slider
-slides.forEach((slide, index) => {
-  slide.style.transform = `translateX(${100 * index}%)`
-})
-
 const moveToSlide = function (cur) {
   slides.forEach((slide, index) => {
     slide.style.transform = `translateX(${100 * (index - cur)}%)`
@@ -141,20 +148,12 @@ const moveToSlide = function (cur) {
 }
 
 const nextSlide = function () {
-  if (currentSlide == slides.length - 1) {
-    currentSlide = 0
-  } else {
-    currentSlide++
-  }
+  currentSlide == slides.length - 1 ? (currentSlide = 0) : currentSlide++
   moveToSlide(currentSlide)
 }
 
 const prevSlide = function () {
-  if (currentSlide == 0) {
-    currentSlide = slides.length - 1
-  } else {
-    currentSlide--
-  }
+  currentSlide == 0 ? (currentSlide = slides.length - 1) : currentSlide--
   moveToSlide(currentSlide)
 }
 
@@ -162,3 +161,30 @@ sliderBtnNext.addEventListener('click', nextSlide)
 sliderBtnPrev.addEventListener('click', prevSlide)
 
 // form
+const addToCard = function (e) {
+  e.preventDefault()
+  step++
+
+  if (step >= 4) {
+    step.classList.add('active-summary')
+  } else {
+    numberOfProducts = 1
+    detailBox.classList.add('hide-detail-box')
+    sectionForm.classList.add('hide-section-form')
+    cartBtnNumber.classList.add('added')
+    formStepZero.classList.remove('active-step')
+    cartBtnNumber.textContent = numberOfProducts
+    stepsBtn.textContent = 'NEXT'
+    formSteps.forEach((step) => {
+      step.classList.remove('active-step')
+    })
+    document.querySelector(`.step--${step}`).classList.add('active-step')
+    document
+      .querySelector(`.progress-btn--${step}`)
+      .classList.add('active-step-btn')
+  }
+}
+
+primaryBtn.forEach((btn) => {
+  btn.addEventListener('click', addToCard)
+})

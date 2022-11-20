@@ -19,7 +19,7 @@
       <p class="coupon__description">Lorem ipsum dolor sit amet consectetur adipisicing
         <span class="coupon__description coupon__description--amount">40 zł</span>
       </p>
-      <button class="coupon__btn"><span>use HANG-2022</span></button>
+      <button class="coupon__btn"><span>use PROMO-TG</span></button>
       <p class="coupon__countdown">30:00</p>
     </div>
     
@@ -46,6 +46,7 @@
           </ul>
         </nav>
         <a href="#form" class="header__btn-link">
+          <span class="header__btn-number">0</span>
           <img src="img/svg/shopping-cart.svg" alt="Shopping cart Icon" class="header__link-icon">
         </a>
       </div>
@@ -166,7 +167,7 @@
                 <option value="7-inches">7"</option>
                 <option value="8-inches">8"</option>
             </select>
-            <button class="section__btn">add to card</button>
+            <a href="#form" class="section__btn" data-btn="primary-btn">add to card</a>
           </form>
         </section>
       </div>
@@ -242,7 +243,7 @@
         </div>
       </div>
 
-      <form action="phpHELL" class="form">
+      <form action="phpHELL" class="form" id="form">
         <!-- form steps buttons-->
         <div class="form__box">
           <img src="img/tongueDRUMS.svg" alt="tongueDRUMS Logo" class="form__logo">
@@ -277,7 +278,7 @@
           </div>
 
           <!-- step 1 -->
-          <div class="step step--1 active-step">
+          <div class="step step--1">
             <div class="card">
               <div class="card__image-wrapper">
                 <img 
@@ -310,7 +311,7 @@
             </div>
           </div>
           <!-- step 2 -->
-          <div class="step step--2 active-step">
+          <div class="step step--2">
             <!-- delivery -->
             <div class="radio-box">
               <input class="radio-box__input" type="radio" id="courier" name="delivery" checked>
@@ -331,7 +332,7 @@
               <label class="radio-box__label" for="bank">
                   <span class="radio-box__title">bank</span>
                   <span class="radio-box__description">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, aperiam nemo sequi ex similique voluptas facere saepe ab assumenda velit ducimus.
+                    Lorem ipsum dolor, sit ameta adipisicing elit. Facilis, aperiam nemo sequi ducimus.
                   </span>
                   <span class="radio-box__amount">10000zł</span>
                   <img src="img/svg/bank.svg" alt="Bank icon" class="radio-box__icon">
@@ -342,7 +343,7 @@
               <label class="radio-box__label" for="cod">
                   <span class="radio-box__title">cod</span>
                   <span class="radio-box__description">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, aperiam nemo sequi ex similique voluptas facere saepe ab assumenda velit ducimus.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, aperiam.
                   </span>
                   <span class="radio-box__amount">10000zł</span>
                   <img src="img/svg/cod.svg" alt="Payment icon" class="radio-box__icon">
@@ -350,7 +351,7 @@
             </div>
           </div>
           <!-- step 3 -->
-          <div class="step step--3 active-step">
+          <div class="step step--3">
             <div class="adress">
               <div class="address__row">
                 <div class="address__col">
@@ -393,7 +394,7 @@
             </div>
           </div>
 
-          <button class="steps__btn">ADD TO CARD</button>
+          <button class="steps__btn" data-btn="0">ADD TO CARD</button>
         </section>
 
         <!-- form bg-->
@@ -506,10 +507,14 @@
     <section class="detail-box">
       <img src="img/detail-box_mobile_large.png" alt="Product detail image" class="detail-box__image">
       <h5 class="detail-box__title">Lorem ipsum dolor sit amet consectetur adipisicing</h5>
-      <a href="#" class="detail-box__btn-link">
+      <a href="#form" class="detail-box__btn-link" data-btn="primary-btn">
         <img src="img/svg/shopping-cart.svg" alt="Shopping cart Icon" class="detail-box__icon">
       </a>
     </section>
+
+    <div class="summary">
+      
+    </div>
 
   </body>
 </html>

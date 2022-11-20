@@ -119,3 +119,14 @@ img[data-src]{
   animation: show 1s ease-in-out;
   box-shadow: 0 0.5rem 4rem rgba($color-dark, 0.2);
 }
+
+.hide-detail-box{
+  transform: translateY(100%);
+}
+.hide-section-form{
+  display: none;
+}
+
+.added{
+  background-color: $color-secondary;
+}

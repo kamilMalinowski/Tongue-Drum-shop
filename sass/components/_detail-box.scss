@@ -10,6 +10,7 @@
   z-index: 9;
   border-radius: 24px 24px 0 0;
   box-shadow: 0 -0.5rem 4rem rgba($color-dark, 0.2);
+  transition: all 1s ease-in-out;
   @media screen and (min-width: 850px) {
     display: none;
   }
@@ -39,6 +40,10 @@
     align-items: center;
     border-radius: 30px;
     box-shadow: 0 0.1rem 0.5rem rgba($color-dark, 0.2);
+    transition: all 0.2s;
+    &:hover{
+      background-color: $color-secondary;
+    }
   }
   &__icon {
     width: 3rem;
