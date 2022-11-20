@@ -334,7 +334,7 @@
                   <span class="radio-box__description">
                     Lorem ipsum dolor, sit ameta adipisicing elit. Facilis, aperiam nemo sequi ducimus.
                   </span>
-                  <span class="radio-box__amount">10000zł</span>
+                  <span class="radio-box__amount">0 €</span>
                   <img src="img/svg/bank.svg" alt="Bank icon" class="radio-box__icon">
               </label>
             </div>
@@ -345,7 +345,7 @@
                   <span class="radio-box__description">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, aperiam.
                   </span>
-                  <span class="radio-box__amount">10000zł</span>
+                  <span class="radio-box__amount">2.98 €</span>
                   <img src="img/svg/cod.svg" alt="Payment icon" class="radio-box__icon">
               </label>
             </div>
@@ -514,7 +514,48 @@
     </section>
 
     <div class="summary">
-
+      <div class="summary__wrapper">
+        <img 
+          src="img/nav_mobile_small.png" 
+          data-src="img/nav_mobile_large.png"
+          alt="Summary image"
+          class="summary__image filter"
+        >
+        <section class="summary__section summary__section--visible">
+          <h4 class="summary__title">Summary</h4>
+          <!-- product -->
+          <div class="summary__box">
+            <p class="summary__name"><b>Product:</b></p>
+            <p class="summary__name">Tongue drum x 1</p>
+            <p class="summary__amount">96.98 €</p>
+          </div>
+          <!-- delivery -->
+          <div class="summary__box">
+            <p class="summary__name"><b>Delivery:</b></p>
+            <p class="summary__name">Courier</p>
+            <p class="summary__amount">4.98 €</p>
+          </div>
+          <!-- payment -->
+          <div class="summary__box">
+            <p class="summary__name"><b>Payment:</b></p>
+            <p class="summary__name">Bank</p>
+            <p class="summary__amount">0 €</p>
+          </div>
+          <!-- total -->
+          <div class="summary__box summary__box--total">
+            <p class="summary__name">Total:</p>
+            <p class="summary__amount">0 €</p>
+          </div>
+          <button class="summary__btn">accept and pay</button>
+        </section>
+        <section 
+          class="summary__section summary__section--hidden hidden-summary-section"
+        >
+          <h4 class="summary__title">
+            This site is a demo created for presentation purposes. You will be redirected to the home page in a moment.
+          </h4>
+        </section>
+      </div>
     </div>
 
   </body>

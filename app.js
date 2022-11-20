@@ -30,6 +30,9 @@ const formStepZero = document.querySelector('.step--0')
 const formSteps = document.querySelectorAll('.step')
 const stepsBtn = document.querySelector('.steps__btn')
 const summary = document.querySelector('.summary')
+const summarySectionVisible = document.querySelector('.summary__section--visible')
+const summarySectionHidden = document.querySelector('.summary__section--hidden')
+const summaryBtn = document.querySelector('.summary__btn')
 
 let countdown
 let currentSlide = 0
@@ -166,7 +169,7 @@ const addToCard = function (e) {
   step++
 
   if (step >= 4) {
-    step.classList.add('active-summary')
+    summary.classList.add('active-summary')
   } else {
     numberOfProducts = 1
     detailBox.classList.add('hide-detail-box')
@@ -188,3 +191,15 @@ const addToCard = function (e) {
 primaryBtn.forEach((btn) => {
   btn.addEventListener('click', addToCard)
 })
+
+// summary
+const acceptSummary = function () {
+  summarySectionVisible.classList.add('hidden-summary-section')
+  summarySectionHidden.classList.remove('hidden-summary-section')
+  setTimeout(()=>{
+    location.reload() // temporary solution
+  },5000)
+}
+
+summaryBtn.addEventListener('click', acceptSummary)
+

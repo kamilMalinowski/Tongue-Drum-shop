@@ -1,0 +1,80 @@
+.summary {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba($color-dark, 0.8);
+  background-image: linear-gradient(
+      45deg,
+      rgba($color-primary, 0.9),
+      rgba($color-secondary, 0.5)
+    ),
+    url('../img/slider3_large.png');
+  background-size: cover;
+  z-index: 999;
+  transition: all 1s;
+    display: none;
+  &__wrapper {
+    text-align: left;
+    width: 80%;
+    max-width: 45rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-light;
+    box-shadow: 0 0.5rem 4rem rgba($color-dark, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: zoom 1s ease-in-out;
+  }
+  &__image {
+    width: 100%;
+  }
+  &__section {
+    padding: 1rem 2rem 2rem;
+    display: grid;
+    grid-gap: 2rem;
+    &--hidden{
+        text-align: center;
+    }
+  }
+  &__title {
+    font-size: 2.4rem;
+    font-weight: $fw-extra-bold;
+  }
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr 2fr 7rem;
+    &--total {
+      padding-top: 2rem;
+      border-top: 1px solid $color-primary;
+      grid-template-columns: 1fr 7rem;
+      font-size: 2rem;
+      font-weight: $fw-extra-bold;
+    }
+  }
+  &__amount {
+    justify-self: flex-start;
+  }
+
+  &__btn {
+    font-size: 1.8rem;
+    width: 100%;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: $fw-extra-bold;
+    color: rgba($color-dark, 0.5);
+    border-radius: 4px;
+    transition: all 0.4s;
+    background-color: $color-primary;
+    color: $color-light;
+    &:hover {
+      background-color: $color-secondary;
+    }
+  }
+}

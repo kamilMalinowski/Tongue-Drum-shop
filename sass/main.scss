@@ -2,6 +2,7 @@
 @import 'abstracts/keyframes';
 
 @import 'base/base';
+
 @import 'components/coupon';
 @import 'components/billboard';
 @import 'components/nav';
@@ -11,6 +12,7 @@
 @import 'components/slider';
 @import 'components/info';
 @import 'components/form';
+@import 'components/summary';
 
 @import 'layout/header';
 @import 'layout/section';
@@ -129,4 +131,11 @@ img[data-src]{
 
 .added{
   background-color: $color-secondary;
+}
+
+.active-summary{
+  display: block;
+}
+.hidden-summary-section{
+  display: none;
 }
