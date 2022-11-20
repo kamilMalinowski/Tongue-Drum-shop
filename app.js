@@ -25,12 +25,16 @@ const detailBox = document.querySelector('.detail-box')
 const detailBtn = document.querySelector('.detail-box__btn-link')
 const cartBtnNumber = document.querySelector('.header__btn-number')
 const primaryBtn = document.querySelectorAll('[data-btn]')
+const form = document.querySelector('.form')
 const sectionForm = document.querySelector('.section__form')
 const formStepZero = document.querySelector('.step--0')
+const steps = document.querySelector('.steps')
 const formSteps = document.querySelectorAll('.step')
 const stepsBtn = document.querySelector('.steps__btn')
 const summary = document.querySelector('.summary')
-const summarySectionVisible = document.querySelector('.summary__section--visible')
+const summarySectionVisible = document.querySelector(
+  '.summary__section--visible',
+)
 const summarySectionHidden = document.querySelector('.summary__section--hidden')
 const summaryBtn = document.querySelector('.summary__btn')
 
@@ -185,6 +189,7 @@ const addToCard = function (e) {
     document
       .querySelector(`.progress-btn--${step}`)
       .classList.add('active-step-btn')
+    scrollToForm()
   }
 }
 
@@ -196,10 +201,16 @@ primaryBtn.forEach((btn) => {
 const acceptSummary = function () {
   summarySectionVisible.classList.add('hidden-summary-section')
   summarySectionHidden.classList.remove('hidden-summary-section')
-  setTimeout(()=>{
+  setTimeout(() => {
     location.reload() // temporary solution
-  },5000)
+  }, 5000)
 }
 
 summaryBtn.addEventListener('click', acceptSummary)
 
+// scroll
+function scrollToForm() {
+  steps.getBoundingClientRect()
+  steps.scrollIntoView({ behavior: 'smooth' })
+  header.classList.remove('fixed-header')
+}
