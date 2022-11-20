@@ -34,6 +34,11 @@ cookiesButtonsContainer.addEventListener('click', function (e) {
   startCountdown()
 })
 
+if (localStorage.getItem('cookies')) {
+  cookies.style.display = 'none'
+  startCountdown()
+}
+
 // coupon
 const deleteCoupon = function () {
   coupon.style.display = 'none'
@@ -41,7 +46,7 @@ const deleteCoupon = function () {
 }
 couponBtnClose.addEventListener('click', deleteCoupon)
 
-const startCountdown = function () {
+function startCountdown() {
   const tick = function () {
     const min = String(Math.trunc(time / 60)).padStart(2, 0)
     const sec = String(time % 60).padStart(2, 0)
@@ -145,7 +150,7 @@ const nextSlide = function () {
 }
 
 const prevSlide = function () {
-  if ((currentSlide == 0)) {
+  if (currentSlide == 0) {
     currentSlide = slides.length - 1
   } else {
     currentSlide--

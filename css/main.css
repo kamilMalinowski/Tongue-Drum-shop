@@ -273,7 +273,6 @@
   right: 0;
   background-color: rgba(53, 53, 53, 0.8);
   z-index: 999;
-  display: none;
 }
 .cookies__wrapper {
   text-align: center;
