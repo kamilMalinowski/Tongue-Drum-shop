@@ -11,6 +11,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    padding: 0 2rem;
   }
   &__image {
     width: 30rem;
@@ -29,10 +30,12 @@
     margin-top: 20rem;
     font-weight: $fw-extra-bold;
     font-size: 3rem;
+    position: relative;
     @media screen and (min-width: 608px) {
       margin-top: 10rem;
       text-align: left;
-      margin: 4rem auto 0 2rem;
+      z-index: 2;
+      margin: 4rem auto 0 0;
     }
   }
   &__content {

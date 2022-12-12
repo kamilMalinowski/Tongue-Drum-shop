@@ -17,7 +17,7 @@
   }
   &--2 {
     overflow: hidden;
-    background-color: rgba($color-primary,0.2);
+    background-color: rgba($color-primary, 0.2);
     padding: 2rem 0;
     @media screen and (min-width: 608px) {
       padding: 4rem 0;
@@ -37,6 +37,9 @@
   &__description {
     margin-top: 1rem;
     opacity: 0.6;
+  }
+  &__amount-box {
+    position: relative;
   }
   &__amount {
     color: $color-primary;
@@ -93,6 +96,31 @@
     }
     @media screen and (min-width: 608px) {
       width: 100%;
+    }
+  }
+}
+
+.section-info {
+  padding: 4rem;
+  &__title {
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem;
+  }
+  &__list {
+    font-weight: $fw-bold;
+    &--sub-list {
+      padding-left: 2rem;
+      font-weight: $fw-light;
+    }
+  }
+  &__list-el {
+    font-size: 2rem;
+    list-style: upper-roman;
+    padding: 2rem 0 1rem;
+    &--sub {
+      font-size: 1.8rem;
+      list-style: decimal;
     }
   }
 }

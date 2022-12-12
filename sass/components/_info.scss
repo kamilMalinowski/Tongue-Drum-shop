@@ -89,4 +89,14 @@
     transform: translateX(-5rem) scale(0.8);
     width: 120%;
   }
+  &__image-box{
+    margin-top: 2rem;
+    margin-left: -2REM;
+    opacity: 0;
+  }
+  &__image{
+    border-radius: 6px;
+    margin: 0 auto;
+    width: 100%;
+  }
 }

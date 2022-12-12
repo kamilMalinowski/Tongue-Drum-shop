@@ -1,24 +1,27 @@
-@import 'abstracts/variables';
-@import 'abstracts/keyframes';
+@import "abstracts/variables";
+@import "abstracts/keyframes";
 
-@import 'base/base';
+@import "base/base";
 
-@import 'components/coupon';
-@import 'components/billboard';
-@import 'components/nav';
-@import 'components/detail-box';
-@import 'components/cookies';
-@import 'components/about-us';
-@import 'components/slider';
-@import 'components/info';
-@import 'components/form';
-@import 'components/summary';
+@import "components/coupon";
+@import "components/billboard";
+@import "components/nav";
+@import "components/detail-box";
+@import "components/cookies";
+@import "components/about-us";
+@import "components/slider";
+@import "components/info";
+@import "components/form";
+@import "components/summary";
 
-@import 'layout/header';
-@import 'layout/section';
-@import 'layout/footer';
+@import "layout/header";
+@import "layout/section";
+@import "layout/footer";
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&display=swap');
+@import "layout/demo";
+@import "layout/home";
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -50,13 +53,13 @@ html {
 }
 
 // special classes
-img[data-src]{
+img[data-src] {
   transition: all 0.2s ease-in-out;
 }
 .filter {
   filter: blur(10px);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  &--circle{
+  &--circle {
     clip-path: circle(50% at 50% 50%);
   }
 }
@@ -82,8 +85,6 @@ img[data-src]{
   transform: rotate(-180deg);
 }
 
-
-
 .active-section {
   display: block;
   opacity: 1;
@@ -97,12 +98,12 @@ img[data-src]{
     background-color: $color-secondary;
     border-color: $color-secondary;
   }
-  span:last-child{
+  span:last-child {
     color: $color-secondary;
   }
 }
 
-.active-step{
+.active-step {
   display: grid;
 }
 
@@ -122,20 +123,47 @@ img[data-src]{
   box-shadow: 0 0.5rem 4rem rgba($color-dark, 0.2);
 }
 
-.hide-detail-box{
+.hide-detail-box {
   transform: translateY(100%);
 }
-.hide-section-form{
+.hide-header {
+  animation: hide 1s ease-in-out;
+  position: relative;
+}
+.hide-section-form {
   display: none;
 }
 
-.added{
+.added {
   background-color: $color-secondary;
 }
 
-.active-summary{
+.active-summary {
   display: block;
 }
-.hidden-summary-section{
+.hidden-summary-section {
   display: none;
+}
+.min-max-btn-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.show-mike {
+  transition: opacity 4s;
+  opacity: 1;
+}
+
+.add-coupon {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  display: inline-block;
+  height: max-content;
+  transition: all 1s;
+  color: $color-light;
+  clip-path: polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%, 10% 50%);
+  padding: 0.1rem 1rem;
+  font-size: 1rem;
+  background-color: $color-secondary;
 }

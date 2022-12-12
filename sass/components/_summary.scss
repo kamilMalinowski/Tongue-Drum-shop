@@ -18,7 +18,7 @@
   &__wrapper {
     text-align: left;
     width: 80%;
-    max-width: 45rem;
+    max-width: 50rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -33,7 +33,7 @@
     width: 100%;
   }
   &__section {
-    padding: 1rem 2rem 2rem;
+    padding: 2rem 2rem 2rem;
     display: grid;
     grid-gap: 2rem;
     &--hidden{
@@ -46,11 +46,14 @@
   }
   &__box {
     display: grid;
-    grid-template-columns: 1fr 2fr 7rem;
+    grid-template-columns: 1fr 2fr 8rem;
+    &--info{
+      grid-template-columns: 1fr;
+    }
     &--total {
       padding-top: 2rem;
       border-top: 1px solid $color-primary;
-      grid-template-columns: 1fr 7rem;
+      grid-template-columns: 1fr 8rem;
       font-size: 2rem;
       font-weight: $fw-extra-bold;
     }
@@ -77,4 +80,8 @@
       background-color: $color-secondary;
     }
   }
+
 }
+
+
+
