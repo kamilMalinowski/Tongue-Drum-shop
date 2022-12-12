@@ -1,8 +1,8 @@
-import { lazyImages } from "/js/_lazyImages.js";
-import { counter } from "./js/_counter.js";
-import { header } from "/js/_header.js";
-import { slider } from "./js/_slider.js";
-import { info } from "./js/_info.js";
+import { lazyImages } from "../js/_lazyImages.js";
+import { counter } from "../js/_counter.js";
+import { header } from "../js/_header.js";
+import { slider } from "../js/_slider.js";
+import { info } from "../js/_info.js";
 
 lazyImages(), counter(), header(), slider(), info();
 
