@@ -19,6 +19,7 @@ const pcs = document.querySelectorAll(".card__quantity");
 const cod = document.querySelector("#cod");
 const bank = document.querySelector("#bank");
 
+const backBtn = document.querySelectorAll(".back-btn");
 const detailBox = document.querySelector(".detail-box");
 // const detailBtn = document.querySelector(".detail-box__btn-link");
 const cartBtnNumber = document.querySelector(".header__btn-number");
@@ -39,7 +40,7 @@ const sumSectionVisible = document.querySelector(".summary__section--visible");
 const sumSectionHidden = document.querySelector(".summary__section--hidden");
 const summaryBtn = document.querySelector(".summary__btn");
 
-summaryBtn.addEventListener
+summaryBtn.addEventListener;
 
 const inputName = document.getElementById("name");
 const inputSurname = document.getElementById("surname");
@@ -105,7 +106,9 @@ let step = 0;
 const showCurrentPrice = function (updated) {
   productPrice.forEach(
     (pri) =>
-      (pri.innerHTML = `${updated.toFixed(2)} <span class="section__currency">${currency}</span>`)
+      (pri.innerHTML = `${updated.toFixed(
+        2
+      )} <span class="section__currency">${currency}</span>`)
   );
 };
 const showTotal = (total) => (total.innerHTML = `${total} ${currency}`);
@@ -158,7 +161,7 @@ maxPcs.addEventListener("click", increase);
 function decrease(e) {
   e.preventDefault();
   numberOfProducts--;
-  cartBtnNumber.innerHTML = numberOfProducts
+  cartBtnNumber.innerHTML = numberOfProducts;
   pcsUp = numberOfProducts;
   showCurrentPcs();
   if (numberOfProducts === 1) minPcs.classList.add("min-max-btn-hidden");
@@ -172,7 +175,7 @@ function decrease(e) {
 function increase(e) {
   e.preventDefault();
   numberOfProducts++;
-  cartBtnNumber.innerHTML = numberOfProducts
+  cartBtnNumber.innerHTML = numberOfProducts;
   pcsUp = numberOfProducts;
   minPcs.classList.remove("min-max-btn-hidden");
   showCurrentPcs();
@@ -193,7 +196,10 @@ function updatePaymentSelection(payment, method) {
 const addToCard = function (e) {
   e.preventDefault();
   step++;
+  whenStep();
+};
 
+function whenStep() {
   if (step == 1) stepsTitle.textContent = "Shopping Cart";
   if (step == 2) {
     stepsTitle.textContent = "Delivery and Payment";
@@ -203,7 +209,8 @@ const addToCard = function (e) {
     total(priceUp, couponUp, sizeUp, pcsUp, deliveryUp, paymentUp);
   }
 
-  if (step == 3) stepsTitle.textContent = "Address";
+  if (step == 3) {stepsTitle.textContent = "Address";
+  summary.classList.remove("active-summary");}
 
   if (step >= 4) {
     summary.classList.add("active-summary");
@@ -226,7 +233,7 @@ const addToCard = function (e) {
       .classList.add("active-step-btn");
     scrollToElement(form);
   }
-};
+}
 
 primaryBtn.forEach((btn) => btn.addEventListener("click", addToCard));
 
@@ -239,7 +246,7 @@ function scrollToElement(el) {
 function totalPriceOnly(price, coupon, size, pcs) {
   let sum = (price - coupon + size) * pcs;
   return (document.querySelector(".summary__amount--priceOnly").innerHTML =
-    sum);
+    sum.toFixed(2));
 }
 function total(price, coupon, size, pcs, del, pay) {
   let sum = (price - coupon + size) * pcs + del + pay;
@@ -248,16 +255,26 @@ function total(price, coupon, size, pcs, del, pay) {
 
 total(priceUp, couponUp, sizeUp, pcsUp, deliveryUp, paymentUp);
 
-
 //!!!!
 const acceptSummary = function () {
   sumSectionVisible.classList.add("hidden-summary-section");
   sumSectionHidden.classList.remove("hidden-summary-section");
   // add som gif clapping
   setTimeout(() => {
-    location.reload(); // temporary solution
+    window.location.href = "index.html";
   }, 5000);
 };
 
 summaryBtn.addEventListener("click", acceptSummary);
+
+// back button test
+
+backBtn.forEach((btn) =>
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    step--;
+    whenStep();
+  })
+);
+
 // ☢️☢️☢️☢️
